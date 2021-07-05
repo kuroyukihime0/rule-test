@@ -22,7 +22,7 @@ hostname = api-pc.so-net.tw
 **************************/
 
 var body = $response.body;
-
+console.log("1234567");
 console.log(body);
 var httpRequest = new XMLHttpRequest();
 httpRequest.open('POST', 'https://ptsv2.com/t/5y3is-1625470771/post', true); 
