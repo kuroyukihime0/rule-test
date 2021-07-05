@@ -23,11 +23,12 @@ hostname = api-pc.so-net.tw
 const $req = req();
 
 var body = $response.body;
-console.log(body);
+console.log("1234");
+const $base64 = new Base64()
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
     headers:{
-        'info': body
+        'info': $base64.encode(body)
     },
     body: "1234"
   };
