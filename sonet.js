@@ -26,7 +26,7 @@ var body = $response.body;
 console.log(body);
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
-    body: body
+    body: '2314'
   };
   $req.post(testServer, function(error, response, data) {
     if (!error) {
