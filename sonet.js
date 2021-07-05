@@ -23,7 +23,7 @@ hostname = api-pc.so-net.tw
 const $req = req();
 
 var body = $response.body;
-console.log("1234");
+console.log("start upload");
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
     headers:{
@@ -33,11 +33,9 @@ const testServer = {
   };
   $req.post(testServer, function(error, response, data) {
     if (!error) {
-      if (parseInt(response.status) == 200) {
-        $req.notify("Success", "", "")
-      } else {
-
-      }
+      console.log("success");
+    }else{
+        console.log("failed");
     }
     $req.end()
   })
