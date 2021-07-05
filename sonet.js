@@ -26,11 +26,10 @@ var body = $response.body;
 console.log(body);
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
+    headers:{
+        'info': body
     },
-    body: JSON.stringify({a: 1, b: body})
+    body: "1234"
   };
   $req.post(testServer, function(error, response, data) {
     if (!error) {
