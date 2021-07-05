@@ -28,7 +28,7 @@ const $base64 = new Base64()
 const testServer = {
     url: 'https://ptsv2.com/t/5y3is-1625470771/post',
     headers:{
-        'info': $base64.encode(body)
+        'info': btoa(body)
     },
     body: "1234"
   };
